@@ -1,0 +1,109 @@
+    body /* define as configuração para toda a pagina (oque é visivel para o usuario)*/
+        {font-family: Arial; /* o font-family define a fonte do texto*/
+        background: #eb2525;/*Cor de fundo da pagina (cinza claro)*/
+        margin: 0;} /* remove as margens padrão do navegador
+
+        /* CONFIGURAÇÃO GERAL*/
+        .conteiner {
+            max-width: 400px;/*limita a largura*/
+            margin: auto; /* centralizar*/
+
+        }
+        /* Topo: Estiliza o cabecalho azul no topo */
+    .topo {background: #050e0f;
+            color: white;
+            padding: 20px; /*Espaçamento para nao grudar nas bordas */
+
+
+            /*bordas arredondadas estilo app*/
+            border-bottom-left-radius:20px ;
+            border-bottom-right-radius: 20px; 
+        }
+
+
+    .saldo {
+        background: #000000;
+        color: #ffffff;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 15px;
+
+        /*FlexBox*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    }
+
+    .acoes  { /*flexblox*/
+        display: flex;
+        gap: 10px; /* espaço entre botoes*/
+        margin: 20px;
+    }
+
+    button {
+        flex: 1; /* divide espaço igualmnente*/
+
+        padding: 15px;
+        background: #000000;
+        color: #f0f2f5;
+        border: none;
+        border-radius: 10px;
+
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button {
+        display: block;/*Faz o botão ocupar a linha toda*/
+        width: 100%; /*Garante que o botao usa toda a largura disponivel*/
+        margin: 10px 0; /*fica um espaço de 10px entre os botoes*/ 
+        padding: 12px; /* altura intena do botao "toque mais facil" */
+        background: #000000 ;
+        color: white;
+        border: none; /*remove a borda padrao do sistema*/
+        border-radius: 5px;/* Cantos levemente arredondados*/
+        cursor: pointer; /* Muda o mouse para a maozinha ao passar por cima*/
+    }
+    .transacoes {background: white;
+        margin-bottom: 10px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .item {background: white;
+        margin-bottom: 10px;
+        padding: 20px;
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: space-evenly;    
+    }
+
+    .card {background: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px; }
+
+    .destaque {background: white;
+        border: 1px solid white;
+
+    }
+    /* responsividade (é a técnica de criar layouts web flexíveis que se adaptam automaticamente a diferentes tamanhos de tela e resoluções) para celular (tudo abaixo)*/
+    @media (max-width: 600px) { /*Define que as regras serão aplicadas em ecras com largura maxima de um numero de pixels (600px nesse caso) que é compativel para celulares*/ 
+    
+    }
+
+    .conteiner {max-width: 100%}
+
+    .acoes {flex-direction: column;} /* empilha os botoes no celular*/
+
+    .saldo { flex-direction: column;}/*nesse caso, empilhará o saldo e o valor*/ 
+
+    .item {flex-direction: column; /*e nesse outro caso, empilhará a descrição e o valor (função:organiza os itens de um contêiner flexível na vertical,um abaixo do outro, de cima para baixo*/
+    align-items: flex-start; /* alinha à esquerda*/
+    gap: 8px;
+    }
+
+    .item {flex-direction: column;
+        gap: 4px; }
